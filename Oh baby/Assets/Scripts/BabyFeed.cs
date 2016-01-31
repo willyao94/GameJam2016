@@ -21,9 +21,9 @@ public class BabyFeed : MonoBehaviour {
 				//Debug.Log(bottle.GetComponent<Bottle>());
 				if(true){
 					babyFed = true;
-					Score.ritualsDone += 1;
+					GameManagerScript.ritualsDone += 1;
 					if(1512000 < Timer.getCurrentTime() && Timer.getCurrentTime() < 1728000){
-						Score.ritualsDone += 1;
+                        GameManagerScript.ritualsDone += 1;
 					}
 				}
 			}
