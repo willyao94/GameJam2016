@@ -14,7 +14,7 @@ public class BabyLift : MonoBehaviour {
 	void Update () {
 		if(this.transform.root.name == "Player"){
 			//babyHeld = true;
-			Score.ritualsDone += 1;
+			GameManagerScript.ritualsDone += 1;
 			this.enabled = false;
 		}
 	}
