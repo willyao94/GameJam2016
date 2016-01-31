@@ -28,4 +28,8 @@ public class Timer : MonoBehaviour {
 
         textTime.text = hours + ":" + minutes + " PM";
     }
+
+    public float getCurrentTime() {
+        return currentTime;
+    }
 }
