@@ -26,7 +26,7 @@ public class Timer : MonoBehaviour {
             minutes = "0" + rawMinutes.ToString();
         }
 		//Debug.Log(currentTime);
-        //textTime.text = hours + ":" + minutes + " PM";
+        textTime.text = hours + ":" + minutes + " PM";
     }
 
     public static float getCurrentTime() {

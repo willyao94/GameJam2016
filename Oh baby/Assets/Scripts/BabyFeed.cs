@@ -21,10 +21,10 @@ public class BabyFeed : MonoBehaviour {
 				if(Bottle.heat == true){
 					babyFed = true;
 					if(1512000 < Timer.getCurrentTime() && Timer.getCurrentTime() < 1728000){
-						Score.ritualsDone += 2;
+						GameManagerScript.ritualsDone += 2;
 					}
 					else {
-						Score.ritualsDone += 1;
+						GameManagerScript.ritualsDone += 1;
 					}
 				}
 			}
