@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        currentTime += 300;
+        currentTime += 60;
 
         string hours = ((int)currentTime / 216000).ToString();
         int rawMinutes = ((int) currentTime / 3600)%60;
