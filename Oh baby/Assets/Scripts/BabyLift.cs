@@ -14,7 +14,12 @@ public class BabyLift : MonoBehaviour {
 	void Update () {
 		if(this.transform.root.name == "Player"){
 			//babyHeld = true;
-			Score.ritualsDone += 1;
+			if(1296000 < Timer.getCurrentTime() && Timer.getCurrentTime() < 1512000){
+				Score.ritualsDone += 2;
+			}
+			else {
+				Score.ritualsDone += 1;
+			}
 			this.enabled = false;
 		}
 	}

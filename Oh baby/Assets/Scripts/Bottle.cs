@@ -4,14 +4,18 @@ using System.Collections;
 public class Bottle : MonoBehaviour {
 	
 	public Sprite hotSprite;
-	public SpriteRenderer renderer;
 
-	public static bool heat;
+	private SpriteRenderer sRenderer;
+	public static bool heat = false;
+
+	void Awake(){
+		sRenderer = GetComponent<SpriteRenderer>();
+	}
 
 	void Update () {
-		if(transform.root.name == "Stove"){
+		if(transform.root.name == "Stove" && heat == false){
 			heat = true;
-			renderer.sprite = hotSprite;
+			sRenderer.sprite = hotSprite;
 		}
 	}
 }
