@@ -18,12 +18,18 @@ public class BabyFeed : MonoBehaviour {
 			timer = timer - 1; 
 		} else {
 			if(bottle.transform.IsChildOf(transform.root)){
-				babyFed = true;
-				Score.ritualsDone += 1;
+				//Debug.Log(bottle.GetComponent<Bottle>());
+				if(true){
+					babyFed = true;
+					Score.ritualsDone += 1;
+					if(1512000 < Timer.getCurrentTime() && Timer.getCurrentTime() < 1728000){
+						Score.ritualsDone += 1;
+					}
+				}
 			}
 		}
 			
-		if(timer <=0) {
+		if(timer <= 0) {
 			Destroy(bottle);
 			this.enabled = false;
 		}

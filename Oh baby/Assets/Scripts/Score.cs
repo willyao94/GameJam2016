@@ -12,6 +12,6 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(ritualsDone); 
+		//Debug.Log(ritualsDone); 
 	}
 }

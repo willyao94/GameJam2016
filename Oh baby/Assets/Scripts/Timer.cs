@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
 
     public static float maxTime = 1296000; // start countdown at this
-    private float currentTime;
+    private static float currentTime;
     public Text textTime; 
 
 
@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        currentTime += 30;
+        currentTime += 60;
 
         string hours = ((int)currentTime / 216000).ToString();
         int rawMinutes = ((int) currentTime / 3600)%60;
@@ -25,11 +25,11 @@ public class Timer : MonoBehaviour {
         if (rawMinutes < 10) {
             minutes = "0" + rawMinutes.ToString();
         }
-
-        textTime.text = hours + ":" + minutes + " PM";
+		//Debug.Log(currentTime);
+        //textTime.text = hours + ":" + minutes + " PM";
     }
 
-    public float getCurrentTime() {
+    public static float getCurrentTime() {
         return currentTime;
     }
 }

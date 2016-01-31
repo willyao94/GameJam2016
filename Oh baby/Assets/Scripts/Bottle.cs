@@ -5,11 +5,11 @@ public class Bottle : MonoBehaviour {
 	
 	public Sprite hotSprite;
 
-	private bool heat;
+	public static bool heat;
 
 	void Update () {
 		if(transform.root.name == "Stove"){
-			//heat = true;
+			heat = true;
 			GetComponent<SpriteRenderer>().sprite = hotSprite;
 		}
 	}
