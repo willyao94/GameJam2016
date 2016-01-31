@@ -15,10 +15,10 @@ public class Diapers : MonoBehaviour {
 		parent = transform.root;
 		if(diapers.transform.IsChildOf(parent) && parent.name == "ChangingTable"){
 			if(1728000 < Timer.getCurrentTime() && Timer.getCurrentTime() < 1944000){
-				Score.ritualsDone += 2;
+				GameManagerScript.ritualsDone += 2;
 			}
 			else {
-				Score.ritualsDone += 1;
+				GameManagerScript.ritualsDone += 1;
 			}
 			Destroy(diapers);
 			this.enabled = false;
