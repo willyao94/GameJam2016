@@ -5,7 +5,7 @@ public class Bottle : MonoBehaviour {
 	
 	public Sprite hotSprite;
 
-	private bool heat = false;
+	public static bool heat;
 
 	void Update () {
 		if(transform.root.name == "Stove"){

@@ -23,7 +23,6 @@ public class Movement : MonoBehaviour
 
 		// Move the player around the scene.
 		Move (h, v);
-
 	}
 
 	void Move (float h, float v)
