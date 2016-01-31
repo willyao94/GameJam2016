@@ -9,8 +9,8 @@ public class MoveOb : MonoBehaviour {
 	private Transform hands;
 
 
-	void awake(){
-		hands = this.transform.Find("Hold position");
+	void Awake(){
+		hands = this.transform.Find("Holding position");
 		//hands = FindHoldPos(transform);
 	}
 
@@ -34,15 +34,9 @@ public class MoveOb : MonoBehaviour {
 					waitTime = 5;
 					}
 
-
-				//GetComponent<Rigidbody>().useGravity = false;
-				//GetComponent<Rigidbody>().isKinematic = true;
-
-			} 
+				} 
 			}
-
 		}
-
 
 	} 
 
