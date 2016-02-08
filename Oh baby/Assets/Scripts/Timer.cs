@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-		currentTime += 60; //number of in game seconds advanced per frame of real life
+		currentTime += 120; //number of in game seconds advanced per frame of real life
 
         string hours = ((int)currentTime / 216000).ToString();
         int rawMinutes = ((int) currentTime / 3600)%60;
