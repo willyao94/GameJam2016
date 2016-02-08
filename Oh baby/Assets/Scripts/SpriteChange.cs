@@ -60,6 +60,7 @@ public class SpriteChange : MonoBehaviour {
 			}
 			if (timer <= 0){
 				sRenderer.sprite = burntSprite;
+				GameManagerScript.ritualsDone -= 100;
 				this.enabled = false;
 			}
 		}

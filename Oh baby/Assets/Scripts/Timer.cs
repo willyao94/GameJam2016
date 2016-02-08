@@ -3,11 +3,10 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
 
-    public static float maxTime = 1296000; // start countdown at this
-    private static float currentTime;
+    public static float maxTime = 1296000; // start clock at 6pm at this
     public Text textTime; 
 
-
+	private static float currentTime;
     // Use this for initialization
     void Start() {
         currentTime = maxTime;
@@ -16,7 +15,7 @@ public class Timer : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        currentTime += 60;
+		currentTime += 60; //number of in game seconds advanced per frame of real life
 
         string hours = ((int)currentTime / 216000).ToString();
         int rawMinutes = ((int) currentTime / 3600)%60;
