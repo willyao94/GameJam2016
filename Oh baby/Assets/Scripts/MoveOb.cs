@@ -29,7 +29,7 @@ public class MoveOb : MonoBehaviour {
 					if (FreeHands()){
 					//Debug.Log(holdPos.transform.root.name);
 					transform.parent = holdPos;
-					transform.rotation = holdPos.rotation;
+					//transform.rotation = holdPos.rotation;
 					transform.position = holdPos.position;
 					waitTime = 5;
 					}

@@ -28,8 +28,9 @@ public class BabyFeed : MonoBehaviour {
 			timer = timer - 1; 
 		} else {
 			if(bottle.transform.IsChildOf(transform.root)){
-				if(Bottle.heat == true){
+				if(bottleIsHot() == true){
 					aSource.clip = coo;
+					bottle.GetComponent<MoveOb> ().enabled = false;
 					babyFed = true;
 					if(1512000 < Timer.getCurrentTime() && Timer.getCurrentTime() < 1728000){
 						GameManagerScript.ritualsDone += 2;
@@ -45,6 +46,15 @@ public class BabyFeed : MonoBehaviour {
 			Destroy(bottle);
 			aSource.Play();
 			this.enabled = false;
+		}
+	}
+	bool bottleIsHot(){
+		if (bottle.GetComponentInChildren<SpriteRenderer>().sprite.name == "bottle_hot") {
+//			Debug.Log ("named");
+			return true;
+		} else {
+//			Debug.Log ("not named");
+			return false;
 		}
 	}
 }

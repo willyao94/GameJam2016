@@ -11,6 +11,7 @@ public class SpriteChange : MonoBehaviour {
 	public Sprite vomitSprite;
 	public Sprite burntSprite;
 	public Sprite happySprite;
+	public Sprite chairSprite;
 
 	private SpriteRenderer sRenderer;
 	private string parentName;
@@ -43,6 +44,9 @@ public class SpriteChange : MonoBehaviour {
 				break;
 			case "Bathtub": 
 				sRenderer.sprite = bathSprite;
+				break;
+			case "High Chair":
+				sRenderer.sprite = chairSprite;
 				break;
 			default:
 				sRenderer.sprite = babySprite;

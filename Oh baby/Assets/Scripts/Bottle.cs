@@ -6,7 +6,7 @@ public class Bottle : MonoBehaviour {
 	public Sprite hotSprite;
 
 	private SpriteRenderer sRenderer;
-	public static bool heat = false;
+	private bool heat = false;
 
 	void Awake(){
 		sRenderer = GetComponent<SpriteRenderer>();
@@ -16,6 +16,7 @@ public class Bottle : MonoBehaviour {
 		if(transform.root.name == "Stove" && heat == false){
 			heat = true;
 			sRenderer.sprite = hotSprite;
+			this.enabled = false;
 		}
 	}
 }
